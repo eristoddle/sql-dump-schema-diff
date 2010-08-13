@@ -1,0 +1,5 @@
+The script is self-contained. It is written in Python and doesn't require any additional libraries.
+
+An *optional* argument (-a) is available to automatically compare a Django database with a django model. This option assumes that:
+  # compdb.py is installed under you Django project folder
+  # you have mysqldump installed on your system
