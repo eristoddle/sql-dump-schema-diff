@@ -1,0 +1,3 @@
+
+  * Currently works only with MySQL dumps
+  * Obviously this tool cannot detect when the name of a field or a table has changed!
