@@ -1,0 +1,48 @@
+===Input===
+
+  * db1.sql: sql dump of a database with a single table: 'person'
+
+{{{
+CREATE TABLE `person` (
+  `last name` varchar(50) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  PRIMARY KEY (`last name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+}}}
+
+  * db2.sql: sql dump of the same database after adding a new table 'car' and modified fields in the 'person' table.
+
+{{{
+CREATE TABLE `car` (
+  `color` varchar(50) NOT NULL,
+  `number_plate` varchar(50) NOT NULL,
+  `brand` varchar(50) NOT NULL,
+  PRIMARY KEY (`number_plate`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `person` (
+  `last name` varchar(50) NOT NULL,
+  `date_of_birth` datetime NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`last name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+}}}
+
+===Command===
+
+{{{
+python compdb.py db1.sql db2.sql
+}}}
+
+===Output===
+
+{{{
+ALTER TABLE `person` MODIFY COLUMN `date_of_birth` datetime NOT NULL;
+ALTER TABLE person ADD COLUMN `first_name` varchar(45) NOT NULL;
+CREATE TABLE `car` (
+        `color` varchar(50) NOT NULL,
+        `number_plate` varchar(50) NOT NULL,
+        `brand` varchar(50) NOT NULL,
+        PRIMARY KEY (`number_plate`)
+);
+}}}
