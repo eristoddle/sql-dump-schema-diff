@@ -1,0 +1,12 @@
+== How do I compare the structure of two mysql databases ==
+
+1. dump your databases with the following commands:
+{{{
+mysqldump -d DB1_NAME > DB1_NAME.sql
+mysqldump -d DB2_NAME > DB2_NAME.sql
+}}}
+
+2. compare them:
+{{{
+python compdb.py DB1_NAME.sql DB2_NAME.sql
+}}}
