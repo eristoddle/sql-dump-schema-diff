@@ -13,7 +13,7 @@ python compdb.py DB1_NAME.sql DB2_NAME.sql
 
 == How can I update my Django database with this tool? ==
 
-This tool can be used as a lightweight solution to evolve your Django database.
+This tool can be used as a lightweight solution to evolve the schema of your Django database.
 
 Just drop compdb.py in your Django project directory. After making changes to your Django model, type the following command:
 
