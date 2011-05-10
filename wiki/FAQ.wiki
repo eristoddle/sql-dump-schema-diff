@@ -1,3 +1,5 @@
+<wiki:toc />
+
 == How do I compare the structure of two mysql databases? ==
 
 1. dump your databases with the following commands:
