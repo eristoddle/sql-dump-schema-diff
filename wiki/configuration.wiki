@@ -1,1 +1,3 @@
 The script is self-contained. It is written in Python and doesn't require any additional library.
+
+If you want to use this tool to help you update your django database, you just have to drop the python file under your project directory. [FAQ See the FAQ for more info].
