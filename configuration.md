@@ -1,0 +1,3 @@
+The script is self-contained. It is written in Python and doesn't require any additional library.
+
+If you want to use this tool to update your Django database, you just have to drop the python file under your project directory and make sure mysqldump is installed on your system. [See the FAQ for more info](FAQ.md).

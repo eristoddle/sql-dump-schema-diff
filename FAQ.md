@@ -1,0 +1,34 @@
+
+
+## How do I compare the structure of two mysql databases? ##
+
+1. dump your databases with the following commands:
+```
+mysqldump -d DB1_NAME > DB1_NAME.sql
+mysqldump -d DB2_NAME > DB2_NAME.sql
+```
+
+2. compare them:
+```
+python compdb.py DB1_NAME.sql DB2_NAME.sql
+```
+
+## How can I update my Django database with this tool? ##
+
+This tool can be used as a lightweight solution to evolve the schema of your Django database.
+
+Just drop compdb.py in your Django project directory. After making changes to your Django model, type the following command:
+
+```
+python compdb.py -a -K APP_NAME
+```
+
+Where APP\_NAME is the name of the Django application.
+
+This command should return the SQL commands to update your database schema. To apply them, simply log into your database:
+
+```
+python manage dbshell
+```
+
+Then paste the SQL commands.
